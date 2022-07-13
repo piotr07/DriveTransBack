@@ -1,8 +1,8 @@
 import express, {json} from "express";
 import cors from 'cors';
 import 'express-async-errors';
-// import {handleError} from "./utils/error";
-// import rateLimit from 'express-rate-limit';
+import {handleError} from "./utils/error";
+// import rateLimit from 'express-rate-limsit';
 // import {adRouter} from "./routers/ad.router";
 
 const app = express();
@@ -18,7 +18,7 @@ app.use(json());
 //
 // app.use('/ad', adRouter)
 //
-// app.use(handleError);
+app.use(handleError);
 
 app.listen(3001, '0.0.0.0', () => {
     console.log('Listening on port http://localhost:3001');
