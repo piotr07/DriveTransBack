@@ -29,7 +29,7 @@ export class LoadingRecord implements LoadingEntity {
         }
 
         if (obj.freight < 0 || obj.freight > 9999999) {
-            throw new ValidationError('Cena nie może być mniejsza niż 0 lub większa niż 9 999 999.');
+            throw new ValidationError('Fracht nie może być mniejszy niż 0 lub większy niż 9 999 999.');
         }
 
         if (typeof obj.lat !== 'number' || typeof obj.lon !== 'number') {
